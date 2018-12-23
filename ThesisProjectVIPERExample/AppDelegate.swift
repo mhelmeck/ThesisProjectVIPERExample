@@ -32,8 +32,9 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         if let window = window {
-            let appBuilder = AppBuilder()
-            window.rootViewController = appBuilder.buildMain()
+            let appBuilder = AppBuilder(repository: AppRepository.shared, apiManager: APIManager())
+            
+            window.rootViewController = appBuilder.buildMainTable()
             window.makeKeyAndVisible()
         }
         

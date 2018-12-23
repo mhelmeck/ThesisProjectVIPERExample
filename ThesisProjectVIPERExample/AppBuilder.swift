@@ -9,14 +9,44 @@
 import UIKit
 
 public class AppBuilder {
-    public init() {
-        
-    }
+    // MARK: - Private properties
+    private let repository: AppRepositoryType
+    private let apiManager: APIManagerType
     
-    internal func buildMain() -> UIViewController {
-        let viewC = UIViewController()
-        viewC.view.backgroundColor = .red
+    // MARK: - Init
+    public init(repository: AppRepositoryType,
+                apiManager: APIManagerType) {
+        self.repository = repository
+        self.apiManager = apiManager
+    }
+}
+
+extension AppBuilder: MainTableBuilder {
+    public func buildMainTable() -> UIViewController {
+        let interactor = MainTableInteractor()
+        let presenter = MainTablePresenter()
+        let router = MainTableRouter()
+        let viewController = MainTableViewController()
         
-        return viewC
+        router.builder = self
+        router.viewController = viewController
+        interactor.dataManager = repository
+    
+        presenter.interactor = interactor
+        presenter.router = router
+        presenter.view = viewController
+
+        interactor.output = presenter
+        
+        viewController.eventHandler = presenter
+        viewController.presenter = presenter
+        
+        return viewController
+    }
+}
+
+extension AppBuilder: MapBuilder {
+    public func buildMap() -> UIViewController {
+        return UIViewController()
     }
 }

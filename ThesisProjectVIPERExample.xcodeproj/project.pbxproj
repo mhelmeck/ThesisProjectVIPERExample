@@ -43,6 +43,14 @@
 		98986A8121CF13A800408831 /* LocationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A8021CF13A800408831 /* LocationAdapter.swift */; };
 		98986A8321CF13B100408831 /* LocationCollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A8221CF13B100408831 /* LocationCollectionAdapter.swift */; };
 		98986A9021CF196700408831 /* AppBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A8F21CF196700408831 /* AppBuilder.swift */; };
+		98986A9321CF1FB600408831 /* MainTableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9221CF1FB600408831 /* MainTableBuilder.swift */; };
+		98986A9521CF20A500408831 /* MapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9421CF20A500408831 /* MapBuilder.swift */; };
+		98986A9921CF26F300408831 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9821CF26F300408831 /* MainTableViewController.swift */; };
+		98986A9B21CF279200408831 /* MainTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9A21CF279200408831 /* MainTablePresenter.swift */; };
+		98986A9D21CF282700408831 /* MainTableInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9C21CF282700408831 /* MainTableInteractor.swift */; };
+		98986A9F21CF292200408831 /* MainTableRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9E21CF292200408831 /* MainTableRouter.swift */; };
+		98986AA121CF298900408831 /* MainTableInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AA021CF298900408831 /* MainTableInteractorIO.swift */; };
+		98986AA321CF2ACA00408831 /* MainTablePresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AA221CF2ACA00408831 /* MainTablePresenterIO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +106,14 @@
 		98986A8021CF13A800408831 /* LocationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAdapter.swift; sourceTree = "<group>"; };
 		98986A8221CF13B100408831 /* LocationCollectionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollectionAdapter.swift; sourceTree = "<group>"; };
 		98986A8F21CF196700408831 /* AppBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilder.swift; sourceTree = "<group>"; };
+		98986A9221CF1FB600408831 /* MainTableBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableBuilder.swift; sourceTree = "<group>"; };
+		98986A9421CF20A500408831 /* MapBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBuilder.swift; sourceTree = "<group>"; };
+		98986A9821CF26F300408831 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		98986A9A21CF279200408831 /* MainTablePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTablePresenter.swift; sourceTree = "<group>"; };
+		98986A9C21CF282700408831 /* MainTableInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableInteractor.swift; sourceTree = "<group>"; };
+		98986A9E21CF292200408831 /* MainTableRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableRouter.swift; sourceTree = "<group>"; };
+		98986AA021CF298900408831 /* MainTableInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableInteractorIO.swift; sourceTree = "<group>"; };
+		98986AA221CF2ACA00408831 /* MainTablePresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTablePresenterIO.swift; sourceTree = "<group>"; };
 		FBC3676D04139924C77787EA /* Pods-ThesisProjectVIPERExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThesisProjectVIPERExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThesisProjectVIPERExampleTests/Pods-ThesisProjectVIPERExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		FF45F708382FEB69C11246BA /* Pods-ThesisProjectVIPERExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThesisProjectVIPERExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThesisProjectVIPERExample/Pods-ThesisProjectVIPERExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,10 +195,9 @@
 		98986A4721CF10B900408831 /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				98986A8421CF175E00408831 /* Views */,
-				98986A8721CF179C00408831 /* Presenters */,
-				98986A8521CF177600408831 /* Interactors */,
-				98986A8621CF178300408831 /* Routers */,
+				98572B2621BDAA22009C8D81 /* ViewController.swift */,
+				98986A9421CF20A500408831 /* MapBuilder.swift */,
+				98986A9621CF263000408831 /* UseCases */,
 				98986A6521CF124000408831 /* Entities */,
 			);
 			path = Project;
@@ -278,33 +293,66 @@
 			path = Adapters;
 			sourceTree = "<group>";
 		};
-		98986A8421CF175E00408831 /* Views */ = {
+		98986A8421CF175E00408831 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				98572B2621BDAA22009C8D81 /* ViewController.swift */,
+				98986A9821CF26F300408831 /* MainTableViewController.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		98986A8521CF177600408831 /* Interactors */ = {
+		98986A8521CF177600408831 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				98986AA021CF298900408831 /* MainTableInteractorIO.swift */,
+				98986A9C21CF282700408831 /* MainTableInteractor.swift */,
 			);
-			path = Interactors;
+			path = Interactor;
 			sourceTree = "<group>";
 		};
-		98986A8621CF178300408831 /* Routers */ = {
+		98986A8621CF178300408831 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				98986A9E21CF292200408831 /* MainTableRouter.swift */,
 			);
-			path = Routers;
+			path = Router;
 			sourceTree = "<group>";
 		};
-		98986A8721CF179C00408831 /* Presenters */ = {
+		98986A8721CF179C00408831 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				98986AA221CF2ACA00408831 /* MainTablePresenterIO.swift */,
+				98986A9A21CF279200408831 /* MainTablePresenter.swift */,
 			);
-			path = Presenters;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		98986A9121CF1F8F00408831 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				98986A9221CF1FB600408831 /* MainTableBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		98986A9621CF263000408831 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				98986A9721CF263800408831 /* MainTable */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		98986A9721CF263800408831 /* MainTable */ = {
+			isa = PBXGroup;
+			children = (
+				98986A9121CF1F8F00408831 /* Builder */,
+				98986A8421CF175E00408831 /* View */,
+				98986A8721CF179C00408831 /* Presenter */,
+				98986A8521CF177600408831 /* Interactor */,
+				98986A8621CF178300408831 /* Router */,
+			);
+			path = MainTable;
 			sourceTree = "<group>";
 		};
 		E2FB5DF43D19D7D1867D51B1 /* Frameworks */ = {
@@ -485,9 +533,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98986AA321CF2ACA00408831 /* MainTablePresenterIO.swift in Sources */,
 				98986A5021CF113800408831 /* ButtonType.swift in Sources */,
 				98986A5421CF117900408831 /* UIButton+Extensions.swift in Sources */,
 				98986A7D21CF139700408831 /* ForecastAdapter.swift in Sources */,
+				98986A9321CF1FB600408831 /* MainTableBuilder.swift in Sources */,
+				98986A9B21CF279200408831 /* MainTablePresenter.swift in Sources */,
 				98986A9021CF196700408831 /* AppBuilder.swift in Sources */,
 				98986A7421CF130900408831 /* APIParent.swift in Sources */,
 				98986A4E21CF112F00408831 /* AssetCodeMapper.swift in Sources */,
@@ -500,11 +551,15 @@
 				98986A5221CF114600408831 /* SeparatorStyle.swift in Sources */,
 				98986A5E21CF11EB00408831 /* APIManagerType.swift in Sources */,
 				98986A7221CF12FD00408831 /* APIForecast.swift in Sources */,
+				98986A9521CF20A500408831 /* MapBuilder.swift in Sources */,
 				98986A7021CF12EA00408831 /* APIConsolidatedWeather.swift in Sources */,
 				98986A6421CF120800408831 /* APIError.swift in Sources */,
 				98572B2D21BDAA22009C8D81 /* ThesisProjectVIPERExample.xcdatamodeld in Sources */,
 				98986A5A21CF11C300408831 /* AppRepositoryType.swift in Sources */,
+				98986A9F21CF292200408831 /* MainTableRouter.swift in Sources */,
 				98986A5C21CF11CD00408831 /* AppRepository.swift in Sources */,
+				98986A9D21CF282700408831 /* MainTableInteractor.swift in Sources */,
+				98986A9921CF26F300408831 /* MainTableViewController.swift in Sources */,
 				98986A6D21CF128A00408831 /* Location.swift in Sources */,
 				98986A7F21CF139F00408831 /* ForecastCollectionAdapter.swift in Sources */,
 				98986A8321CF13B100408831 /* LocationCollectionAdapter.swift in Sources */,
@@ -512,6 +567,7 @@
 				98986A7621CF131300408831 /* APISource.swift in Sources */,
 				98572B2521BDAA22009C8D81 /* AppDelegate.swift in Sources */,
 				98986A6721CF127100408831 /* City.swift in Sources */,
+				98986AA121CF298900408831 /* MainTableInteractorIO.swift in Sources */,
 				98986A7B21CF138C00408831 /* CoordinatesAdapter.swift in Sources */,
 				98986A8121CF13A800408831 /* LocationAdapter.swift in Sources */,
 				98986A5821CF118A00408831 /* UITableViewCell+Extensions.swift in Sources */,
