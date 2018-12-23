@@ -42,6 +42,7 @@
 		98986A7F21CF139F00408831 /* ForecastCollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A7E21CF139F00408831 /* ForecastCollectionAdapter.swift */; };
 		98986A8121CF13A800408831 /* LocationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A8021CF13A800408831 /* LocationAdapter.swift */; };
 		98986A8321CF13B100408831 /* LocationCollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A8221CF13B100408831 /* LocationCollectionAdapter.swift */; };
+		98986A9021CF196700408831 /* AppBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A8F21CF196700408831 /* AppBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		98986A7E21CF139F00408831 /* ForecastCollectionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionAdapter.swift; sourceTree = "<group>"; };
 		98986A8021CF13A800408831 /* LocationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAdapter.swift; sourceTree = "<group>"; };
 		98986A8221CF13B100408831 /* LocationCollectionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollectionAdapter.swift; sourceTree = "<group>"; };
+		98986A8F21CF196700408831 /* AppBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilder.swift; sourceTree = "<group>"; };
 		FBC3676D04139924C77787EA /* Pods-ThesisProjectVIPERExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThesisProjectVIPERExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThesisProjectVIPERExampleTests/Pods-ThesisProjectVIPERExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		FF45F708382FEB69C11246BA /* Pods-ThesisProjectVIPERExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThesisProjectVIPERExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThesisProjectVIPERExample/Pods-ThesisProjectVIPERExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +159,7 @@
 				98986A4721CF10B900408831 /* Project */,
 				98986A4821CF10C300408831 /* Utilities */,
 				98986A4921CF10CD00408831 /* Resources */,
+				98986A8F21CF196700408831 /* AppBuilder.swift */,
 				98572B2421BDAA22009C8D81 /* AppDelegate.swift */,
 				98572B3321BDAA23009C8D81 /* Info.plist */,
 				98572B2B21BDAA22009C8D81 /* ThesisProjectVIPERExample.xcdatamodeld */,
@@ -176,7 +179,10 @@
 		98986A4721CF10B900408831 /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				98572B2621BDAA22009C8D81 /* ViewController.swift */,
+				98986A8421CF175E00408831 /* Views */,
+				98986A8721CF179C00408831 /* Presenters */,
+				98986A8521CF177600408831 /* Interactors */,
+				98986A8621CF178300408831 /* Routers */,
 				98986A6521CF124000408831 /* Entities */,
 			);
 			path = Project;
@@ -270,6 +276,35 @@
 				98986A8221CF13B100408831 /* LocationCollectionAdapter.swift */,
 			);
 			path = Adapters;
+			sourceTree = "<group>";
+		};
+		98986A8421CF175E00408831 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98572B2621BDAA22009C8D81 /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		98986A8521CF177600408831 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		98986A8621CF178300408831 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		98986A8721CF179C00408831 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		E2FB5DF43D19D7D1867D51B1 /* Frameworks */ = {
@@ -453,6 +488,7 @@
 				98986A5021CF113800408831 /* ButtonType.swift in Sources */,
 				98986A5421CF117900408831 /* UIButton+Extensions.swift in Sources */,
 				98986A7D21CF139700408831 /* ForecastAdapter.swift in Sources */,
+				98986A9021CF196700408831 /* AppBuilder.swift in Sources */,
 				98986A7421CF130900408831 /* APIParent.swift in Sources */,
 				98986A4E21CF112F00408831 /* AssetCodeMapper.swift in Sources */,
 				98986A5621CF118100408831 /* UIColor+Extensions.swift in Sources */,

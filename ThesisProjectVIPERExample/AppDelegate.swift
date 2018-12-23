@@ -29,7 +29,14 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
     public func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        if let window = window {
+            let appBuilder = AppBuilder()
+            window.rootViewController = appBuilder.buildMain()
+            window.makeKeyAndVisible()
+        }
+        
         return true
     }
 
