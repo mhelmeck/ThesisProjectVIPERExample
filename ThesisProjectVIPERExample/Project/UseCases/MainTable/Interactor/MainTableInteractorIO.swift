@@ -7,11 +7,15 @@
 //
 
 public protocol MainTableUseCase: class {
-    
+    func fetchInitialData()
+    func reloadData()
+    func getCities() -> [City]
 }
 
 public protocol MainTableUseCaseOutput: class {
-    
+    func dataDidFetch()
 }
 
-public typealias MainTableEntityGateway = CityPersistence
+public typealias MainTableEntityGateway = APIForecastProvider
+
+public typealias MainTableDataGateway = CityPersistence

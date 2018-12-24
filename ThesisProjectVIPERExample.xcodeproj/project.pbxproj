@@ -51,6 +51,9 @@
 		98986A9F21CF292200408831 /* MainTableRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9E21CF292200408831 /* MainTableRouter.swift */; };
 		98986AA121CF298900408831 /* MainTableInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AA021CF298900408831 /* MainTableInteractorIO.swift */; };
 		98986AA321CF2ACA00408831 /* MainTablePresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AA221CF2ACA00408831 /* MainTablePresenterIO.swift */; };
+		98986AA821D0D31800408831 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AA621D0D31800408831 /* MainTableViewCell.swift */; };
+		98986AA921D0D31800408831 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98986AA721D0D31800408831 /* MainTableViewCell.xib */; };
+		98986AAD21D0E8DC00408831 /* DataProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AAC21D0E8DC00408831 /* DataProviderType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +117,9 @@
 		98986A9E21CF292200408831 /* MainTableRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableRouter.swift; sourceTree = "<group>"; };
 		98986AA021CF298900408831 /* MainTableInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableInteractorIO.swift; sourceTree = "<group>"; };
 		98986AA221CF2ACA00408831 /* MainTablePresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTablePresenterIO.swift; sourceTree = "<group>"; };
+		98986AA621D0D31800408831 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		98986AA721D0D31800408831 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		98986AAC21D0E8DC00408831 /* DataProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderType.swift; sourceTree = "<group>"; };
 		FBC3676D04139924C77787EA /* Pods-ThesisProjectVIPERExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThesisProjectVIPERExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThesisProjectVIPERExampleTests/Pods-ThesisProjectVIPERExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		FF45F708382FEB69C11246BA /* Pods-ThesisProjectVIPERExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThesisProjectVIPERExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThesisProjectVIPERExample/Pods-ThesisProjectVIPERExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,6 +205,7 @@
 				98986A9421CF20A500408831 /* MapBuilder.swift */,
 				98986A9621CF263000408831 /* UseCases */,
 				98986A6521CF124000408831 /* Entities */,
+				98986AAA21D0E7CC00408831 /* DomainData */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				98986A4C21CF112200408831 /* API */,
+				98986AAB21D0E85800408831 /* Providers */,
 				98986A4B21CF111900408831 /* Repository */,
 				98986A4A21CF111000408831 /* Extensions */,
 				98986A4D21CF112F00408831 /* AssetCodeMapper.swift */,
@@ -259,25 +267,12 @@
 		98986A6521CF124000408831 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				98986A7721CF137A00408831 /* Adapters */,
-				98986A6E21CF12D700408831 /* APIModels */,
-				98986A6621CF127100408831 /* City.swift */,
-				98986A6821CF127900408831 /* Coordinates.swift */,
-				98986A6A21CF128200408831 /* Forecast.swift */,
-				98986A6C21CF128A00408831 /* Location.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		98986A6E21CF12D700408831 /* APIModels */ = {
-			isa = PBXGroup;
-			children = (
 				98986A6F21CF12EA00408831 /* APIConsolidatedWeather.swift */,
 				98986A7121CF12FD00408831 /* APIForecast.swift */,
 				98986A7321CF130900408831 /* APIParent.swift */,
 				98986A7521CF131300408831 /* APISource.swift */,
 			);
-			path = APIModels;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		98986A7721CF137A00408831 /* Adapters */ = {
@@ -297,6 +292,8 @@
 			isa = PBXGroup;
 			children = (
 				98986A9821CF26F300408831 /* MainTableViewController.swift */,
+				98986AA621D0D31800408831 /* MainTableViewCell.swift */,
+				98986AA721D0D31800408831 /* MainTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -353,6 +350,26 @@
 				98986A8621CF178300408831 /* Router */,
 			);
 			path = MainTable;
+			sourceTree = "<group>";
+		};
+		98986AAA21D0E7CC00408831 /* DomainData */ = {
+			isa = PBXGroup;
+			children = (
+				98986A7721CF137A00408831 /* Adapters */,
+				98986A6621CF127100408831 /* City.swift */,
+				98986A6821CF127900408831 /* Coordinates.swift */,
+				98986A6A21CF128200408831 /* Forecast.swift */,
+				98986A6C21CF128A00408831 /* Location.swift */,
+			);
+			path = DomainData;
+			sourceTree = "<group>";
+		};
+		98986AAB21D0E85800408831 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				98986AAC21D0E8DC00408831 /* DataProviderType.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 		E2FB5DF43D19D7D1867D51B1 /* Frameworks */ = {
@@ -450,6 +467,7 @@
 			files = (
 				98572B3221BDAA23009C8D81 /* LaunchScreen.storyboard in Resources */,
 				98572B2F21BDAA23009C8D81 /* Assets.xcassets in Resources */,
+				98986AA921D0D31800408831 /* MainTableViewCell.xib in Resources */,
 				98572B2A21BDAA22009C8D81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,11 +559,13 @@
 				98986A9B21CF279200408831 /* MainTablePresenter.swift in Sources */,
 				98986A9021CF196700408831 /* AppBuilder.swift in Sources */,
 				98986A7421CF130900408831 /* APIParent.swift in Sources */,
+				98986AAD21D0E8DC00408831 /* DataProviderType.swift in Sources */,
 				98986A4E21CF112F00408831 /* AssetCodeMapper.swift in Sources */,
 				98986A5621CF118100408831 /* UIColor+Extensions.swift in Sources */,
 				98986A6B21CF128200408831 /* Forecast.swift in Sources */,
 				98986A7921CF138400408831 /* CityAdapter.swift in Sources */,
 				98986A6921CF127900408831 /* Coordinates.swift in Sources */,
+				98986AA821D0D31800408831 /* MainTableViewCell.swift in Sources */,
 				98572B2721BDAA22009C8D81 /* ViewController.swift in Sources */,
 				98986A6221CF11FF00408831 /* APIResult.swift in Sources */,
 				98986A5221CF114600408831 /* SeparatorStyle.swift in Sources */,

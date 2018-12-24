@@ -30,16 +30,17 @@ extension AppBuilder: MainTableBuilder {
         
         router.builder = self
         router.viewController = viewController
-        interactor.dataManager = repository
-    
+
+        presenter.view = viewController
         presenter.interactor = interactor
         presenter.router = router
-        presenter.view = viewController
 
         interactor.output = presenter
-        
+        interactor.apiManager = apiManager
+        interactor.dataManager = repository
+
+        viewController.presentation = presenter
         viewController.eventHandler = presenter
-        viewController.presenter = presenter
         
         return viewController
     }

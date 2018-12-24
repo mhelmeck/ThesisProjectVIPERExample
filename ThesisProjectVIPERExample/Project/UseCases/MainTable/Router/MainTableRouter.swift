@@ -20,5 +20,11 @@ public class MainTableRouter {
 }
 
 extension MainTableRouter: MainTableNavigation {
+    public func navigateToDetails() {
+        viewController.performSegue(withIdentifier: "PushDetailsSegue", sender: nil)
+    }
     
+    public func navigateToMap() {
+        viewController.performSegue(withIdentifier: "PushMapSegue", sender: nil)
+    }
 }
