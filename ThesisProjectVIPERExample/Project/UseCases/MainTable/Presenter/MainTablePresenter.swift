@@ -7,7 +7,7 @@
 //
 
 public class MainTablePresenter {
-    // MARK: - Properties
+    // MARK: - Public properties
     public weak var view: MainTableView!
     public var interactor: MainTableUseCase!
     public var router: MainTableNavigation!
@@ -16,15 +16,7 @@ public class MainTablePresenter {
     public init() {}
 }
 
-extension MainTablePresenter: MainTableUseCaseOutput {
-    public func didFetchData() {
-        view.reloadView()
-        view.setSeparatorStyle(.singleLine)
-        view.isLoading(false)
-    }
-}
-
-extension MainTablePresenter: MainTableViewPresentation {
+extension MainTablePresenter: MainTablePresentation {
     public func getNumberOfCells() -> Int {
         return interactor.getCities().count
     }
@@ -60,5 +52,13 @@ extension MainTablePresenter: MainTableEventHandler {
     
     public func handleNaviagationPressed(atRow: Int) {
         router.navigateToMap()
+    }
+}
+
+extension MainTablePresenter: MainTableUseCaseOutput {
+    public func didFetchData() {
+        view.reloadView()
+        view.setSeparatorStyle(.singleLine)
+        view.isLoading(false)
     }
 }

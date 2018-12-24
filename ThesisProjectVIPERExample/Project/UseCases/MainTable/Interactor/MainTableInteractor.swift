@@ -7,7 +7,7 @@
 //
 
 public class MainTableInteractor {
-    // MARK: - Properties
+    // MARK: - Public properties
     public weak var output: MainTableUseCaseOutput!
     public var apiManager: MainTableEntityGateway!
     public var dataManager: MainTableDataGateway!

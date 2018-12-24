@@ -10,7 +10,7 @@ import UIKit
 
 public class MainTableViewController: UITableViewController {
     // MARK: - Public properties
-    public var presentation: MainTableViewPresentation!
+    public var presentation: MainTablePresentation!
     public var eventHandler: MainTableEventHandler!
     
     // MARK: - Private properties

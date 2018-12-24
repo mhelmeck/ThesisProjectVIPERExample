@@ -9,7 +9,7 @@
 import UIKit
 
 public class MainTableRouter {
-    // MARK: - Properties
+    // MARK: - Public properties
     public typealias OtherBuilders = MapBuilder
     
     public var builder: OtherBuilders!

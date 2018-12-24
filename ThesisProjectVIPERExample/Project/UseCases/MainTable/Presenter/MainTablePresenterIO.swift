@@ -6,7 +6,7 @@
 //  Copyright © 2018 Maciej Hełmecki. All rights reserved.
 //
 
-public protocol MainTableViewPresentation: class {
+public protocol MainTablePresentation: class {
     func getNumberOfCells() -> Int
     func configureCell(atRow row: Int, configure: (String, String, String) -> Void)
 }

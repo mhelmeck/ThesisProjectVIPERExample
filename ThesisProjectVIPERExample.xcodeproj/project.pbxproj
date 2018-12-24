@@ -10,7 +10,6 @@
 		22C3519AF42515C0D495D4E4 /* Pods_ThesisProjectVIPERExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37445F42D1FF166CD2129602 /* Pods_ThesisProjectVIPERExample.framework */; };
 		96C3D2D4F55FC5810928D0B0 /* Pods_ThesisProjectVIPERExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BDA745C06E488CFB1620D87 /* Pods_ThesisProjectVIPERExampleTests.framework */; };
 		98572B2521BDAA22009C8D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98572B2421BDAA22009C8D81 /* AppDelegate.swift */; };
-		98572B2721BDAA22009C8D81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98572B2621BDAA22009C8D81 /* ViewController.swift */; };
 		98572B2A21BDAA22009C8D81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98572B2821BDAA22009C8D81 /* Main.storyboard */; };
 		98572B2D21BDAA22009C8D81 /* ThesisProjectVIPERExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98572B2B21BDAA22009C8D81 /* ThesisProjectVIPERExample.xcdatamodeld */; };
 		98572B2F21BDAA23009C8D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98572B2E21BDAA23009C8D81 /* Assets.xcassets */; };
@@ -53,6 +52,12 @@
 		98986AA321CF2ACA00408831 /* MainTablePresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AA221CF2ACA00408831 /* MainTablePresenterIO.swift */; };
 		98986AA821D0D31800408831 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AA621D0D31800408831 /* MainTableViewCell.swift */; };
 		98986AA921D0D31800408831 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98986AA721D0D31800408831 /* MainTableViewCell.xib */; };
+		98986AB521D18A4100408831 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AB421D18A4100408831 /* MapViewController.swift */; };
+		98986AB721D18A4D00408831 /* MapPresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AB621D18A4D00408831 /* MapPresenterIO.swift */; };
+		98986AB921D18A5500408831 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AB821D18A5500408831 /* MapPresenter.swift */; };
+		98986ABB21D18A6E00408831 /* MapInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986ABA21D18A6E00408831 /* MapInteractorIO.swift */; };
+		98986ABD21D18ACD00408831 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986ABC21D18ACD00408831 /* MapInteractor.swift */; };
+		98986ABF21D18AD600408831 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986ABE21D18AD600408831 /* MapRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +77,6 @@
 		738251771BC5E3B901698A83 /* Pods-ThesisProjectVIPERExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThesisProjectVIPERExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThesisProjectVIPERExample/Pods-ThesisProjectVIPERExample.release.xcconfig"; sourceTree = "<group>"; };
 		98572B2121BDAA22009C8D81 /* ThesisProjectVIPERExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThesisProjectVIPERExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98572B2421BDAA22009C8D81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		98572B2621BDAA22009C8D81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		98572B2921BDAA22009C8D81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98572B2C21BDAA22009C8D81 /* ThesisProjectVIPERExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ThesisProjectVIPERExample.xcdatamodel; sourceTree = "<group>"; };
 		98572B2E21BDAA23009C8D81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +122,12 @@
 		98986AA221CF2ACA00408831 /* MainTablePresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTablePresenterIO.swift; sourceTree = "<group>"; };
 		98986AA621D0D31800408831 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		98986AA721D0D31800408831 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		98986AB421D18A4100408831 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		98986AB621D18A4D00408831 /* MapPresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterIO.swift; sourceTree = "<group>"; };
+		98986AB821D18A5500408831 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		98986ABA21D18A6E00408831 /* MapInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorIO.swift; sourceTree = "<group>"; };
+		98986ABC21D18ACD00408831 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		98986ABE21D18AD600408831 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
 		FBC3676D04139924C77787EA /* Pods-ThesisProjectVIPERExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThesisProjectVIPERExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThesisProjectVIPERExampleTests/Pods-ThesisProjectVIPERExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		FF45F708382FEB69C11246BA /* Pods-ThesisProjectVIPERExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThesisProjectVIPERExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThesisProjectVIPERExample/Pods-ThesisProjectVIPERExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,8 +209,6 @@
 		98986A4721CF10B900408831 /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				98572B2621BDAA22009C8D81 /* ViewController.swift */,
-				98986A9421CF20A500408831 /* MapBuilder.swift */,
 				98986A9621CF263000408831 /* UseCases */,
 				98986A6521CF124000408831 /* Entities */,
 				98986AAA21D0E7CC00408831 /* DomainData */,
@@ -333,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				98986A9721CF263800408831 /* MainTable */,
+				98986AAE21D1893800408831 /* Map */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -359,6 +368,60 @@
 				98986A6C21CF128A00408831 /* Location.swift */,
 			);
 			path = DomainData;
+			sourceTree = "<group>";
+		};
+		98986AAE21D1893800408831 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				98986AB321D1897100408831 /* Builder */,
+				98986AB221D1896D00408831 /* View */,
+				98986AB121D1896400408831 /* Presenter */,
+				98986AB021D1895C00408831 /* Interactor */,
+				98986AAF21D1895700408831 /* Router */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		98986AAF21D1895700408831 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				98986ABE21D18AD600408831 /* MapRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		98986AB021D1895C00408831 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				98986ABA21D18A6E00408831 /* MapInteractorIO.swift */,
+				98986ABC21D18ACD00408831 /* MapInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		98986AB121D1896400408831 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				98986AB621D18A4D00408831 /* MapPresenterIO.swift */,
+				98986AB821D18A5500408831 /* MapPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		98986AB221D1896D00408831 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				98986AB421D18A4100408831 /* MapViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		98986AB321D1897100408831 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				98986A9421CF20A500408831 /* MapBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 		E2FB5DF43D19D7D1867D51B1 /* Frameworks */ = {
@@ -554,17 +617,20 @@
 				98986A7921CF138400408831 /* CityAdapter.swift in Sources */,
 				98986A6921CF127900408831 /* Coordinates.swift in Sources */,
 				98986AA821D0D31800408831 /* MainTableViewCell.swift in Sources */,
-				98572B2721BDAA22009C8D81 /* ViewController.swift in Sources */,
 				98986A6221CF11FF00408831 /* APIResult.swift in Sources */,
 				98986A5221CF114600408831 /* SeparatorStyle.swift in Sources */,
 				98986A5E21CF11EB00408831 /* APIManagerType.swift in Sources */,
 				98986A7221CF12FD00408831 /* APIForecast.swift in Sources */,
 				98986A9521CF20A500408831 /* MapBuilder.swift in Sources */,
+				98986AB521D18A4100408831 /* MapViewController.swift in Sources */,
 				98986A7021CF12EA00408831 /* APIConsolidatedWeather.swift in Sources */,
 				98986A6421CF120800408831 /* APIError.swift in Sources */,
 				98572B2D21BDAA22009C8D81 /* ThesisProjectVIPERExample.xcdatamodeld in Sources */,
+				98986ABB21D18A6E00408831 /* MapInteractorIO.swift in Sources */,
 				98986A5A21CF11C300408831 /* AppRepositoryType.swift in Sources */,
+				98986ABD21D18ACD00408831 /* MapInteractor.swift in Sources */,
 				98986A9F21CF292200408831 /* MainTableRouter.swift in Sources */,
+				98986AB921D18A5500408831 /* MapPresenter.swift in Sources */,
 				98986A5C21CF11CD00408831 /* AppRepository.swift in Sources */,
 				98986A9D21CF282700408831 /* MainTableInteractor.swift in Sources */,
 				98986A9921CF26F300408831 /* MainTableViewController.swift in Sources */,
@@ -577,6 +643,8 @@
 				98986A6721CF127100408831 /* City.swift in Sources */,
 				98986AA121CF298900408831 /* MainTableInteractorIO.swift in Sources */,
 				98986A7B21CF138C00408831 /* CoordinatesAdapter.swift in Sources */,
+				98986AB721D18A4D00408831 /* MapPresenterIO.swift in Sources */,
+				98986ABF21D18AD600408831 /* MapRouter.swift in Sources */,
 				98986A8121CF13A800408831 /* LocationAdapter.swift in Sources */,
 				98986A5821CF118A00408831 /* UITableViewCell+Extensions.swift in Sources */,
 			);
