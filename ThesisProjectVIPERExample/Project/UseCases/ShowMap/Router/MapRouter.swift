@@ -1,5 +1,5 @@
 //
-//  MapRouter.swift
+//  ShowMapRouter.swift
 //  ThesisProjectVIPERExample
 //
 //  Created by Maciej Hełmecki on 24/12/2018.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class MapRouter {
+public class ShowMapRouter {
     // MARK: - Public properties
-    public typealias OtherBuilders = MainTableRouter
+    public typealias OtherBuilders = CitiesListRouter
     
     public var builder: OtherBuilders!
     public weak var viewController: UIViewController!
@@ -19,4 +19,4 @@ public class MapRouter {
     public init() {}
 }
 
-extension MapRouter: MapNavigation {}
+extension ShowMapRouter: ShowMapNavigation {}

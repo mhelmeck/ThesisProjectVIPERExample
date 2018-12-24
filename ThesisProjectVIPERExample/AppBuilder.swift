@@ -21,12 +21,12 @@ public class AppBuilder {
     }
 }
 
-extension AppBuilder: MainTableBuilder {
-    public func buildMainTable() -> UIViewController {
-        let interactor = MainTableInteractor()
-        let presenter = MainTablePresenter()
-        let router = MainTableRouter()
-        let viewController = MainTableViewController()
+extension AppBuilder: CitiesListBuilder {
+    public func buildCitiesList() -> UIViewController {
+        let interactor = CitiesListInteractor()
+        let presenter = CitiesListPresenter()
+        let router = CitiesListRouter()
+        let viewController = CitiesListViewController()
         
         router.builder = self
         router.viewController = viewController
@@ -46,8 +46,8 @@ extension AppBuilder: MainTableBuilder {
     }
 }
 
-extension AppBuilder: MapBuilder {
-    public func buildMap() -> UIViewController {
+extension AppBuilder: ShowMapBuilder {
+    public func buildShowMap() -> UIViewController {
         return UIViewController()
     }
 }

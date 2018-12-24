@@ -34,7 +34,7 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
         if let window = window {
             let appBuilder = AppBuilder(repository: AppRepository.shared, apiManager: APIManager())
             
-            window.rootViewController = appBuilder.buildMainTable()
+            window.rootViewController = appBuilder.buildCitiesList()
             window.makeKeyAndVisible()
         }
         

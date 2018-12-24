@@ -1,5 +1,5 @@
 //
-//  MapBuilder.swift
+//  ShowMapBuilder.swift
 //  ThesisProjectVIPERExample
 //
 //  Created by Maciej Hełmecki on 23/12/2018.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-public protocol MapBuilder: class {
-    func buildMap() -> UIViewController
+public protocol ShowMapBuilder: class {
+    func buildShowMap() -> UIViewController
 }

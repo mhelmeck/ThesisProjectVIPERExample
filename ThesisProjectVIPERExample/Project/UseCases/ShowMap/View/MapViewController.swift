@@ -1,5 +1,5 @@
 //
-//  MapViewController.swift
+//  ShowMapViewController.swift
 //  ThesisProjectVIPERExample
 //
 //  Created by Maciej Hełmecki on 24/12/2018.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-public class MapViewController: UITableViewController {
+public class ShowMapViewController: UITableViewController {
     // MARK: - Public properties
-    public var presentation: MapPresentation!
-    public var eventHandler: MapEventHandler!
+    public var presentation: ShowMapPresentation!
+    public var eventHandler: ShowMapEventHandler!
     
     // MARK: - Private properties
     

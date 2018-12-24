@@ -1,22 +1,22 @@
 //
-//  MainTablePresenter.swift
+//  CitiesListPresenter.swift
 //  ThesisProjectVIPERExample
 //
 //  Created by Maciej Hełmecki on 23/12/2018.
 //  Copyright © 2018 Maciej Hełmecki. All rights reserved.
 //
 
-public class MainTablePresenter {
+public class CitiesListPresenter {
     // MARK: - Public properties
-    public weak var view: MainTableView!
-    public var interactor: MainTableUseCase!
-    public var router: MainTableNavigation!
+    public weak var view: CitiesListView!
+    public var interactor: CitiesListUseCase!
+    public var router: CitiesListNavigation!
     
     // MARK: - Init
     public init() {}
 }
 
-extension MainTablePresenter: MainTablePresentation {
+extension CitiesListPresenter: CitiesListPresentation {
     public func getNumberOfCells() -> Int {
         return interactor.getCities().count
     }
@@ -32,12 +32,8 @@ extension MainTablePresenter: MainTablePresentation {
     }
 }
 
-public class CellConfiguration {
-    
-}
-extension MainTablePresenter: MainTableEventHandler {
+extension CitiesListPresenter: CitiesListEventHandler {
     public func handleViewReady() {
-        // first init
         view.isLoading(true)
         interactor.fetchInitialData()
     }
@@ -55,7 +51,7 @@ extension MainTablePresenter: MainTableEventHandler {
     }
 }
 
-extension MainTablePresenter: MainTableUseCaseOutput {
+extension CitiesListPresenter: CitiesListUseCaseOutput {
     public func didFetchData() {
         view.reloadView()
         view.setSeparatorStyle(.singleLine)

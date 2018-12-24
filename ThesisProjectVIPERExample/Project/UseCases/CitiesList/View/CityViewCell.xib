@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RUD-K5-L0Y" customClass="CityViewCell" customModule="ThesisProjectVIPERExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RUD-K5-L0Y" id="aC6-C6-AMj">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rLX-nB-iVA">
+                        <rect key="frame" x="192" y="-0.5" width="44" height="44.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="T9x-nn-hCC"/>
+                            <constraint firstAttribute="width" constant="44" id="a0O-Ob-k3l"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDp-zz-2Vb" userLabel="cityNameLabel">
+                        <rect key="frame" x="32" y="11.5" width="58" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z71-Zl-izy" userLabel="tempLabel">
+                        <rect key="frame" x="106" y="11.5" width="54" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="54" id="agx-My-ur6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EN1-Nb-Eue" userLabel="NavigationButton">
+                        <rect key="frame" x="236" y="0.0" width="84" height="43.5"/>
+                        <connections>
+                            <action selector="navigationButtonTapped:" destination="RUD-K5-L0Y" eventType="touchUpInside" id="EoN-6O-gds"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigation_icon" translatesAutoresizingMaskIntoConstraints="NO" id="fiH-xs-5Nq">
+                        <rect key="frame" x="268" y="12" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="0hY-Z3-nZl"/>
+                            <constraint firstAttribute="height" constant="20" id="Ovd-xu-1hm"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CDp-zz-2Vb" firstAttribute="leading" secondItem="aC6-C6-AMj" secondAttribute="leading" constant="32" id="5pQ-Po-zwU"/>
+                    <constraint firstItem="rLX-nB-iVA" firstAttribute="leading" secondItem="z71-Zl-izy" secondAttribute="trailing" constant="32" id="Cpl-vs-YlS"/>
+                    <constraint firstAttribute="trailing" secondItem="fiH-xs-5Nq" secondAttribute="trailing" constant="32" id="Dkc-R8-Gzr"/>
+                    <constraint firstItem="fiH-xs-5Nq" firstAttribute="centerY" secondItem="aC6-C6-AMj" secondAttribute="centerY" id="NdD-WB-Ckl"/>
+                    <constraint firstAttribute="bottom" secondItem="EN1-Nb-Eue" secondAttribute="bottom" id="P32-xf-Xbd"/>
+                    <constraint firstItem="rLX-nB-iVA" firstAttribute="centerY" secondItem="aC6-C6-AMj" secondAttribute="centerY" id="RKh-Xy-eEO"/>
+                    <constraint firstItem="EN1-Nb-Eue" firstAttribute="top" secondItem="aC6-C6-AMj" secondAttribute="top" id="ZYl-cj-eq1"/>
+                    <constraint firstItem="z71-Zl-izy" firstAttribute="leading" secondItem="CDp-zz-2Vb" secondAttribute="trailing" constant="16" id="cwh-5r-i37"/>
+                    <constraint firstItem="z71-Zl-izy" firstAttribute="centerY" secondItem="aC6-C6-AMj" secondAttribute="centerY" id="eJJ-ap-u5n"/>
+                    <constraint firstItem="CDp-zz-2Vb" firstAttribute="centerY" secondItem="aC6-C6-AMj" secondAttribute="centerY" id="nus-7P-dJa"/>
+                    <constraint firstItem="EN1-Nb-Eue" firstAttribute="leading" secondItem="rLX-nB-iVA" secondAttribute="trailing" id="oH1-FY-BzF"/>
+                    <constraint firstItem="fiH-xs-5Nq" firstAttribute="leading" secondItem="rLX-nB-iVA" secondAttribute="trailing" constant="32" id="rj4-JK-0Po"/>
+                    <constraint firstAttribute="trailing" secondItem="EN1-Nb-Eue" secondAttribute="trailing" id="zSl-DR-4dU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="cfl-39-I1T"/>
+            <connections>
+                <outlet property="cityNameLabel" destination="CDp-zz-2Vb" id="7yy-Vn-QzN"/>
+                <outlet property="iconImageView" destination="rLX-nB-iVA" id="J3s-ec-fsf"/>
+                <outlet property="tempLabel" destination="z71-Zl-izy" id="SqK-7z-ZQC"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="navigation_icon" width="39.724136352539062" height="39.724136352539062"/>
+    </resources>
+</document>

@@ -1,5 +1,5 @@
 //
-//  MainTableViewController.swift
+//  CitiesListViewController.swift
 //  ThesisProjectVIPERExample
 //
 //  Created by Maciej Hełmecki on 23/12/2018.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-public class MainTableViewController: UITableViewController {
+public class CitiesListViewController: UITableViewController {
     // MARK: - Public properties
-    public var presentation: MainTablePresentation!
-    public var eventHandler: MainTableEventHandler!
+    public var presentation: CitiesListPresentation!
+    public var eventHandler: CitiesListEventHandler!
     
     // MARK: - Private properties
     private let activityIndicatorView: UIActivityIndicatorView = {
@@ -44,8 +44,8 @@ public class MainTableViewController: UITableViewController {
     
     // MARK: - Private methods
     private func registerCell() {
-        let nib = UINib(nibName: MainTableViewCell.identifier, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: MainTableViewCell.identifier)
+        let nib = UINib(nibName: CityViewCell.identifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: CityViewCell.identifier)
     }
     
     private func setupTableView() {
@@ -54,7 +54,7 @@ public class MainTableViewController: UITableViewController {
     }
 }
 
-extension MainTableViewController: MainTableView {
+extension CitiesListViewController: CitiesListView {
     public func setSeparatorStyle(_ style: SeparatorStyle) {
         switch style {
         case .singleLine:
@@ -73,16 +73,15 @@ extension MainTableViewController: MainTableView {
     }
 }
 
-public extension MainTableViewController {
+public extension CitiesListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presentation.getNumberOfCells()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: MainTableViewCell.identifier,
-            for: indexPath) as? MainTableViewCell else {
-                fatalError("Failed to dequeue reusable cell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CityViewCell.identifier,
+                                                       for: indexPath) as? CityViewCell else {
+            fatalError("Failed to dequeue reusable cell")
         }
         
         cell.delegate = self
@@ -104,8 +103,8 @@ public extension MainTableViewController {
     }
 }
 
-extension MainTableViewController: MainTableViewCellDelegate {
-    public func mainTableViewCellDidTapNavigationButton(_ cell: MainTableViewCell) {
+extension CitiesListViewController: CityViewCellDelegate {
+    public func cityViewCellDidTapNavigationButton(_ cell: CityViewCell) {
         guard let row = tableView.indexPath(for: cell)?.row else {
             return
         }

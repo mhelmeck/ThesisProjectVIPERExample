@@ -42,16 +42,16 @@
 		98986A8121CF13A800408831 /* LocationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A8021CF13A800408831 /* LocationAdapter.swift */; };
 		98986A8321CF13B100408831 /* LocationCollectionAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A8221CF13B100408831 /* LocationCollectionAdapter.swift */; };
 		98986A9021CF196700408831 /* AppBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A8F21CF196700408831 /* AppBuilder.swift */; };
-		98986A9321CF1FB600408831 /* MainTableBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9221CF1FB600408831 /* MainTableBuilder.swift */; };
-		98986A9521CF20A500408831 /* MapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9421CF20A500408831 /* MapBuilder.swift */; };
-		98986A9921CF26F300408831 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9821CF26F300408831 /* MainTableViewController.swift */; };
+		98986A9321CF1FB600408831 /* CitiesListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9221CF1FB600408831 /* CitiesListBuilder.swift */; };
+		98986A9521CF20A500408831 /* ShowMapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9421CF20A500408831 /* ShowMapBuilder.swift */; };
+		98986A9921CF26F300408831 /* CitiesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9821CF26F300408831 /* CitiesListViewController.swift */; };
 		98986A9B21CF279200408831 /* MainTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9A21CF279200408831 /* MainTablePresenter.swift */; };
 		98986A9D21CF282700408831 /* MainTableInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9C21CF282700408831 /* MainTableInteractor.swift */; };
 		98986A9F21CF292200408831 /* MainTableRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986A9E21CF292200408831 /* MainTableRouter.swift */; };
 		98986AA121CF298900408831 /* MainTableInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AA021CF298900408831 /* MainTableInteractorIO.swift */; };
 		98986AA321CF2ACA00408831 /* MainTablePresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AA221CF2ACA00408831 /* MainTablePresenterIO.swift */; };
-		98986AA821D0D31800408831 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AA621D0D31800408831 /* MainTableViewCell.swift */; };
-		98986AA921D0D31800408831 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98986AA721D0D31800408831 /* MainTableViewCell.xib */; };
+		98986AA821D0D31800408831 /* CityViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AA621D0D31800408831 /* CityViewCell.swift */; };
+		98986AA921D0D31800408831 /* CityViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98986AA721D0D31800408831 /* CityViewCell.xib */; };
 		98986AB521D18A4100408831 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AB421D18A4100408831 /* MapViewController.swift */; };
 		98986AB721D18A4D00408831 /* MapPresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AB621D18A4D00408831 /* MapPresenterIO.swift */; };
 		98986AB921D18A5500408831 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98986AB821D18A5500408831 /* MapPresenter.swift */; };
@@ -112,16 +112,16 @@
 		98986A8021CF13A800408831 /* LocationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAdapter.swift; sourceTree = "<group>"; };
 		98986A8221CF13B100408831 /* LocationCollectionAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollectionAdapter.swift; sourceTree = "<group>"; };
 		98986A8F21CF196700408831 /* AppBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBuilder.swift; sourceTree = "<group>"; };
-		98986A9221CF1FB600408831 /* MainTableBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableBuilder.swift; sourceTree = "<group>"; };
-		98986A9421CF20A500408831 /* MapBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBuilder.swift; sourceTree = "<group>"; };
-		98986A9821CF26F300408831 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		98986A9221CF1FB600408831 /* CitiesListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListBuilder.swift; sourceTree = "<group>"; };
+		98986A9421CF20A500408831 /* ShowMapBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMapBuilder.swift; sourceTree = "<group>"; };
+		98986A9821CF26F300408831 /* CitiesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListViewController.swift; sourceTree = "<group>"; };
 		98986A9A21CF279200408831 /* MainTablePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTablePresenter.swift; sourceTree = "<group>"; };
 		98986A9C21CF282700408831 /* MainTableInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableInteractor.swift; sourceTree = "<group>"; };
 		98986A9E21CF292200408831 /* MainTableRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableRouter.swift; sourceTree = "<group>"; };
 		98986AA021CF298900408831 /* MainTableInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableInteractorIO.swift; sourceTree = "<group>"; };
 		98986AA221CF2ACA00408831 /* MainTablePresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTablePresenterIO.swift; sourceTree = "<group>"; };
-		98986AA621D0D31800408831 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
-		98986AA721D0D31800408831 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		98986AA621D0D31800408831 /* CityViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewCell.swift; sourceTree = "<group>"; };
+		98986AA721D0D31800408831 /* CityViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityViewCell.xib; sourceTree = "<group>"; };
 		98986AB421D18A4100408831 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		98986AB621D18A4D00408831 /* MapPresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenterIO.swift; sourceTree = "<group>"; };
 		98986AB821D18A5500408831 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
@@ -296,9 +296,9 @@
 		98986A8421CF175E00408831 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				98986A9821CF26F300408831 /* MainTableViewController.swift */,
-				98986AA621D0D31800408831 /* MainTableViewCell.swift */,
-				98986AA721D0D31800408831 /* MainTableViewCell.xib */,
+				98986A9821CF26F300408831 /* CitiesListViewController.swift */,
+				98986AA621D0D31800408831 /* CityViewCell.swift */,
+				98986AA721D0D31800408831 /* CityViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 		98986A9121CF1F8F00408831 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
-				98986A9221CF1FB600408831 /* MainTableBuilder.swift */,
+				98986A9221CF1FB600408831 /* CitiesListBuilder.swift */,
 			);
 			path = Builder;
 			sourceTree = "<group>";
@@ -340,13 +340,15 @@
 		98986A9621CF263000408831 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				98986A9721CF263800408831 /* MainTable */,
-				98986AAE21D1893800408831 /* Map */,
+				98986A9721CF263800408831 /* CitiesList */,
+				98986AC021D18EF400408831 /* CityDetails */,
+				98986AAE21D1893800408831 /* ShowMap */,
+				98986AC121D18F0400408831 /* SearchLocation */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		98986A9721CF263800408831 /* MainTable */ = {
+		98986A9721CF263800408831 /* CitiesList */ = {
 			isa = PBXGroup;
 			children = (
 				98986A9121CF1F8F00408831 /* Builder */,
@@ -355,7 +357,7 @@
 				98986A8521CF177600408831 /* Interactor */,
 				98986A8621CF178300408831 /* Router */,
 			);
-			path = MainTable;
+			path = CitiesList;
 			sourceTree = "<group>";
 		};
 		98986AAA21D0E7CC00408831 /* DomainData */ = {
@@ -370,7 +372,7 @@
 			path = DomainData;
 			sourceTree = "<group>";
 		};
-		98986AAE21D1893800408831 /* Map */ = {
+		98986AAE21D1893800408831 /* ShowMap */ = {
 			isa = PBXGroup;
 			children = (
 				98986AB321D1897100408831 /* Builder */,
@@ -379,7 +381,7 @@
 				98986AB021D1895C00408831 /* Interactor */,
 				98986AAF21D1895700408831 /* Router */,
 			);
-			path = Map;
+			path = ShowMap;
 			sourceTree = "<group>";
 		};
 		98986AAF21D1895700408831 /* Router */ = {
@@ -419,9 +421,23 @@
 		98986AB321D1897100408831 /* Builder */ = {
 			isa = PBXGroup;
 			children = (
-				98986A9421CF20A500408831 /* MapBuilder.swift */,
+				98986A9421CF20A500408831 /* ShowMapBuilder.swift */,
 			);
 			path = Builder;
+			sourceTree = "<group>";
+		};
+		98986AC021D18EF400408831 /* CityDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CityDetails;
+			sourceTree = "<group>";
+		};
+		98986AC121D18F0400408831 /* SearchLocation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchLocation;
 			sourceTree = "<group>";
 		};
 		E2FB5DF43D19D7D1867D51B1 /* Frameworks */ = {
@@ -519,7 +535,7 @@
 			files = (
 				98572B3221BDAA23009C8D81 /* LaunchScreen.storyboard in Resources */,
 				98572B2F21BDAA23009C8D81 /* Assets.xcassets in Resources */,
-				98986AA921D0D31800408831 /* MainTableViewCell.xib in Resources */,
+				98986AA921D0D31800408831 /* CityViewCell.xib in Resources */,
 				98572B2A21BDAA22009C8D81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,7 +623,7 @@
 				98986A5021CF113800408831 /* ButtonType.swift in Sources */,
 				98986A5421CF117900408831 /* UIButton+Extensions.swift in Sources */,
 				98986A7D21CF139700408831 /* ForecastAdapter.swift in Sources */,
-				98986A9321CF1FB600408831 /* MainTableBuilder.swift in Sources */,
+				98986A9321CF1FB600408831 /* CitiesListBuilder.swift in Sources */,
 				98986A9B21CF279200408831 /* MainTablePresenter.swift in Sources */,
 				98986A9021CF196700408831 /* AppBuilder.swift in Sources */,
 				98986A7421CF130900408831 /* APIParent.swift in Sources */,
@@ -616,12 +632,12 @@
 				98986A6B21CF128200408831 /* Forecast.swift in Sources */,
 				98986A7921CF138400408831 /* CityAdapter.swift in Sources */,
 				98986A6921CF127900408831 /* Coordinates.swift in Sources */,
-				98986AA821D0D31800408831 /* MainTableViewCell.swift in Sources */,
+				98986AA821D0D31800408831 /* CityViewCell.swift in Sources */,
 				98986A6221CF11FF00408831 /* APIResult.swift in Sources */,
 				98986A5221CF114600408831 /* SeparatorStyle.swift in Sources */,
 				98986A5E21CF11EB00408831 /* APIManagerType.swift in Sources */,
 				98986A7221CF12FD00408831 /* APIForecast.swift in Sources */,
-				98986A9521CF20A500408831 /* MapBuilder.swift in Sources */,
+				98986A9521CF20A500408831 /* ShowMapBuilder.swift in Sources */,
 				98986AB521D18A4100408831 /* MapViewController.swift in Sources */,
 				98986A7021CF12EA00408831 /* APIConsolidatedWeather.swift in Sources */,
 				98986A6421CF120800408831 /* APIError.swift in Sources */,
@@ -633,7 +649,7 @@
 				98986AB921D18A5500408831 /* MapPresenter.swift in Sources */,
 				98986A5C21CF11CD00408831 /* AppRepository.swift in Sources */,
 				98986A9D21CF282700408831 /* MainTableInteractor.swift in Sources */,
-				98986A9921CF26F300408831 /* MainTableViewController.swift in Sources */,
+				98986A9921CF26F300408831 /* CitiesListViewController.swift in Sources */,
 				98986A6D21CF128A00408831 /* Location.swift in Sources */,
 				98986A7F21CF139F00408831 /* ForecastCollectionAdapter.swift in Sources */,
 				98986A8321CF13B100408831 /* LocationCollectionAdapter.swift in Sources */,

@@ -1,22 +1,22 @@
 //
-//  MainTableInteractor.swift
+//  CitiesListInteractor.swift
 //  ThesisProjectVIPERExample
 //
 //  Created by Maciej Hełmecki on 23/12/2018.
 //  Copyright © 2018 Maciej Hełmecki. All rights reserved.
 //
 
-public class MainTableInteractor {
+public class CitiesListInteractor {
     // MARK: - Public properties
-    public weak var output: MainTableUseCaseOutput!
-    public var apiManager: MainTableEntityGateway!
-    public var dataManager: MainTableDataGateway!
+    public weak var output: CitiesListUseCaseOutput!
+    public var apiManager: CitiesListEntityGateway!
+    public var dataManager: CitiesListDataGateway!
     
     // MARK: - Init
     public init() {}
 }
 
-extension MainTableInteractor: MainTableUseCase {
+extension CitiesListInteractor: CitiesListUseCase {
     public func fetchInitialData() {
         let initialCityCodes = ["44418", "4118", "804365"]
         var requestCounter = initialCityCodes.count

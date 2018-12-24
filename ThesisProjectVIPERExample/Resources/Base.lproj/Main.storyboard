@@ -12,7 +12,7 @@
         <!--Maciej Hełmecki-->
         <scene sceneID="s7u-k0-9k2">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="UKA-1d-2UZ" customClass="MainTableViewController" customModule="ThesisProjectVIPERExample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="UKA-1d-2UZ" customClass="CitiesListViewController" customModule="ThesisProjectVIPERExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pdz-Gu-YIG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

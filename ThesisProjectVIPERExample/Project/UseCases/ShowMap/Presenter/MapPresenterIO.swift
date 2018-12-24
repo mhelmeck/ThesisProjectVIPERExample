@@ -1,18 +1,18 @@
 //
-//  MapPresenterIO.swift
+//  ShowMapPresenterIO.swift
 //  ThesisProjectVIPERExample
 //
 //  Created by Maciej Hełmecki on 24/12/2018.
 //  Copyright © 2018 Maciej Hełmecki. All rights reserved.
 //
 
-public protocol MapPresentation: class {}
+public protocol ShowMapPresentation: class {}
 
-public protocol MapView: class {}
+public protocol ShowMapView: class {}
 
-public protocol MapEventHandler: class {
+public protocol ShowMapEventHandler: class {
     func handleViewReady()
     func handleViewDidAppear()
 }
 
-public protocol MapNavigation: class {}
+public protocol ShowMapNavigation: class {}

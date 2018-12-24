@@ -1,5 +1,5 @@
 //
-//  MainTableViewCell.swift
+//  CityViewCell.swift
 //  ThesisProjectVIPERExample
 //
 //  Created by Maciej Hełmecki on 24/12/2018.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-public protocol MainTableViewCellDelegate: class {
-    func mainTableViewCellDidTapNavigationButton(_ cell: MainTableViewCell)
+public protocol CityViewCellDelegate: class {
+    func cityViewCellDidTapNavigationButton(_ cell: CityViewCell)
 }
 
-public class MainTableViewCell: UITableViewCell {
+public class CityViewCell: UITableViewCell {
     // Properties
     // swiftlint:disable private_outlet
     @IBOutlet public weak var cityNameLabel: UILabel!
     @IBOutlet public weak var tempLabel: UILabel!
     @IBOutlet public weak var iconImageView: UIImageView!
     
-    weak public var delegate: MainTableViewCellDelegate?
+    weak public var delegate: CityViewCellDelegate?
     
     // Init
     override public func awakeFromNib() {
@@ -34,7 +34,7 @@ public class MainTableViewCell: UITableViewCell {
     
     // Public methods
     @IBAction public func navigationButtonTapped(_ sender: Any) {
-        delegate?.mainTableViewCellDidTapNavigationButton(self)
+        delegate?.cityViewCellDidTapNavigationButton(self)
     }
     
     // Private methods

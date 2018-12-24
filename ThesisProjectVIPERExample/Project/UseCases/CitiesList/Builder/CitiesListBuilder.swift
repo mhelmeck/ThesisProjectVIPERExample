@@ -1,5 +1,5 @@
 //
-//  MainTableBuilder.swift
+//  CitiesListBuilder.swift
 //  ThesisProjectVIPERExample
 //
 //  Created by Maciej Hełmecki on 23/12/2018.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-public protocol MainTableBuilder: class {
-    func buildMainTable() -> UIViewController
+public protocol CitiesListBuilder: class {
+    func buildCitiesList() -> UIViewController
 }

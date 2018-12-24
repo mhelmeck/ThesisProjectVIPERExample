@@ -1,5 +1,5 @@
 //
-//  MainTableRouter.swift
+//  CitiesListRouter.swift
 //  ThesisProjectVIPERExample
 //
 //  Created by Maciej Hełmecki on 23/12/2018.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class MainTableRouter {
+public class CitiesListRouter {
     // MARK: - Public properties
-    public typealias OtherBuilders = MapBuilder
+    public typealias OtherBuilders = ShowMapBuilder
     
     public var builder: OtherBuilders!
     public weak var viewController: UIViewController!
@@ -19,7 +19,7 @@ public class MainTableRouter {
     public init() {}
 }
 
-extension MainTableRouter: MainTableNavigation {
+extension CitiesListRouter: CitiesListNavigation {
     public func navigateToDetails() {
         viewController.performSegue(withIdentifier: "PushDetailsSegue", sender: nil)
     }
