@@ -29,14 +29,10 @@ extension MainTableInteractor: MainTableUseCase {
                 self.dataManager.addCity(city: adapter.toCity())
                 requestCounter -= 1
                 if requestCounter == 0 {
-                   self.output.dataDidFetch()
+                   self.output.didFetchData()
                 }
             }
         }
-    }
-    
-    public func reloadData() {
-        
     }
     
     public func getCities() -> [City] {

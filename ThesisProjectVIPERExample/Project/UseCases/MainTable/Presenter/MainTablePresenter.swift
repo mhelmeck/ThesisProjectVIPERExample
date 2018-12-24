@@ -17,7 +17,7 @@ public class MainTablePresenter {
 }
 
 extension MainTablePresenter: MainTableUseCaseOutput {
-    public func dataDidFetch() {
+    public func didFetchData() {
         view.reloadView()
         view.setSeparatorStyle(.singleLine)
         view.isLoading(false)
@@ -51,7 +51,6 @@ extension MainTablePresenter: MainTableEventHandler {
     }
     
     public func handleViewDidAppear() {
-        interactor.reloadData()
         view.reloadView()
     }
     
