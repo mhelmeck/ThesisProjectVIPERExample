@@ -16,4 +16,8 @@ public class ShowMapInteractor {
     public init() {}
 }
 
-extension ShowMapInteractor: ShowMapUseCase {}
+extension ShowMapInteractor: ShowMapUseCase {
+    public func getCities() -> [City] {
+        return dataManager.getCities()
+    }
+}

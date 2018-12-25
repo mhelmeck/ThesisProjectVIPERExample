@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class SearchLocationViewController: UITableViewController {
+public class SearchLocationViewController: UIViewController {
     // MARK: - Public properties
     public var presentation: SearchLocationPresentation!
     public var eventHandler: SearchLocationEventHandler!

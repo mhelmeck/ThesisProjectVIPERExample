@@ -12,8 +12,13 @@ public class ShowMapPresenter {
     public var interactor: ShowMapUseCase!
     public var router: ShowMapNavigation!
     
+    // MARK: - Public properties
+    private let row: Int
+    
     // MARK: - Init
-    public init() {}
+    public init(row: Int) {
+        self.row = row
+    }
 }
 
 extension ShowMapPresenter: ShowMapPresentation {}
@@ -21,7 +26,14 @@ extension ShowMapPresenter: ShowMapPresentation {}
 extension ShowMapPresenter: ShowMapEventHandler {
     public func handleViewReady() {}
 
-    public func handleViewDidAppear() {}
+    public func handleViewDidAppear() {
+        let city = interactor.getCities()[row]
+        let latitude = city.coordinates.lat
+        let longitude = city.coordinates.lon
+        
+        view.setLocation(latitude: latitude, longitude: longitude)
+        view.setupAnnotation(latitude: latitude, longitude: longitude)
+    }
 }
 
 extension ShowMapPresenter: ShowMapUseCaseOutput {}

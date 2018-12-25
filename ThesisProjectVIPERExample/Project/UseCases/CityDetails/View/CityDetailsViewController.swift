@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CityDetailsViewController: UITableViewController {
+public class CityDetailsViewController: UIViewController {
     // MARK: - Public properties
     public var presentation: CityDetailsPresentation!
     public var eventHandler: CityDetailsEventHandler!

@@ -48,6 +48,30 @@ extension AppBuilder: CitiesListBuilder {
 
 extension AppBuilder: ShowMapBuilder {
     public func buildShowMap() -> UIViewController {
-        return UIViewController()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(
+            withIdentifier: "ShowMap") as? ShowMapViewController else {
+            fatalError("Could not instantiate initial storyboard with name: ShowMap")
+        }
+        
+        let interactor = ShowMapInteractor()
+        let presenter = ShowMapPresenter(row: 0)
+        let router = ShowMapRouter()
+        
+        router.builder = self
+        router.viewController = viewController
+        
+        presenter.view = viewController
+        presenter.interactor = interactor
+        presenter.router = router
+        
+        interactor.output = presenter
+        interactor.apiManager = apiManager
+        interactor.dataManager = repository
+        
+        viewController.presentation = presenter
+        viewController.eventHandler = presenter
+        
+        return viewController
     }
 }

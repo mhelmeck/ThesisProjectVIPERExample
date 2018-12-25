@@ -32,9 +32,16 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         if let window = window {
-            let appBuilder = AppBuilder(repository: AppRepository.shared, apiManager: APIManager())
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let navigationController = storyboard.instantiateViewController(
+                withIdentifier: "NavigationController") as? UINavigationController else {
+                fatalError("Could not instantiate initial storyboard with name: ShowMap")
+            }
             
-            window.rootViewController = appBuilder.buildCitiesList()
+            let appBuilder = AppBuilder(repository: AppRepository.shared, apiManager: APIManager())
+            navigationController.pushViewController(appBuilder.buildCitiesList(), animated: true)
+            
+            window.rootViewController = navigationController
             window.makeKeyAndVisible()
         }
         

@@ -10,7 +10,7 @@ import UIKit
 
 public class CityDetailsRouter {
     // MARK: - Public properties
-    public typealias OtherBuilders = CitiesListRouter
+    public typealias OtherBuilders = CitiesListBuilder
     
     public var builder: OtherBuilders!
     public weak var viewController: UIViewController!

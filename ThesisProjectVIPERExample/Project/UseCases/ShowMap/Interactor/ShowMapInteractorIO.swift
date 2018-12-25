@@ -6,7 +6,9 @@
 //  Copyright © 2018 Maciej Hełmecki. All rights reserved.
 //
 
-public protocol ShowMapUseCase: class {}
+public protocol ShowMapUseCase: class {
+    func getCities() -> [City]
+}
 
 public protocol ShowMapUseCaseOutput: class {}
 

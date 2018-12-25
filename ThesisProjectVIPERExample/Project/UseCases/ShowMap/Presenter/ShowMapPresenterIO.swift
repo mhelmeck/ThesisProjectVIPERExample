@@ -8,7 +8,10 @@
 
 public protocol ShowMapPresentation: class {}
 
-public protocol ShowMapView: class {}
+public protocol ShowMapView: class {
+    func setLocation(latitude: Double, longitude: Double)
+    func setupAnnotation(latitude: Double, longitude: Double)
+}
 
 public protocol ShowMapEventHandler: class {
     func handleViewReady()

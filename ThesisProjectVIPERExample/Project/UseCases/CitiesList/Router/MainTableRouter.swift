@@ -21,10 +21,12 @@ public class CitiesListRouter {
 
 extension CitiesListRouter: CitiesListNavigation {
     public func navigateToDetails() {
-        viewController.performSegue(withIdentifier: "PushDetailsSegue", sender: nil)
+        viewController.performSegue(withIdentifier: "PushCityDetailsSegue", sender: nil)
     }
     
     public func navigateToMap() {
-        viewController.performSegue(withIdentifier: "PushMapSegue", sender: nil)
+        let showMapViewController = builder.buildShowMap()
+        
+        viewController.navigationController?.pushViewController(showMapViewController, animated: true)
     }
 }
