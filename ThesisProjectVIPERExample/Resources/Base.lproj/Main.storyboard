@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Maciej Hełmecki-->
+        <!--Cities List View Controller-->
         <scene sceneID="s7u-k0-9k2">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="UKA-1d-2UZ" customClass="CitiesListViewController" customModule="ThesisProjectVIPERExample" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CitiesList" clearsSelectionOnViewWillAppear="NO" id="UKA-1d-2UZ" customClass="CitiesListViewController" customModule="ThesisProjectVIPERExample" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Pdz-Gu-YIG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,9 +33,6 @@
                             <outlet property="delegate" destination="UKA-1d-2UZ" id="BMw-k5-zyZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Maciej Hełmecki" id="wzz-EM-PDo">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JSX-NI-8pT"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Pdz-Gu-YIG" id="rf8-xt-PsJ"/>
                     </connections>

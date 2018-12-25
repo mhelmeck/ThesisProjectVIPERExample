@@ -42,12 +42,12 @@ extension CitiesListPresenter: CitiesListEventHandler {
         view.reloadView()
     }
     
-    public func handleCellPressed(atRow: Int) {
+    public func handleCellPressed(atRow row: Int) {
         router.navigateToDetails()
     }
     
-    public func handleNaviagationPressed(atRow: Int) {
-        router.navigateToMap()
+    public func handleNaviagationPressed(atRow row: Int) {
+        router.navigateToMap(atRow: row)
     }
 }
 

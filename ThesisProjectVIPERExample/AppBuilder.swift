@@ -23,10 +23,15 @@ public class AppBuilder {
 
 extension AppBuilder: CitiesListBuilder {
     public func buildCitiesList() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(
+            withIdentifier: "CitiesList") as? CitiesListViewController else {
+                fatalError("Could not instantiate initial storyboard with name: ShowMap")
+        }
+        
         let interactor = CitiesListInteractor()
         let presenter = CitiesListPresenter()
         let router = CitiesListRouter()
-        let viewController = CitiesListViewController()
         
         router.builder = self
         router.viewController = viewController
@@ -47,7 +52,7 @@ extension AppBuilder: CitiesListBuilder {
 }
 
 extension AppBuilder: ShowMapBuilder {
-    public func buildShowMap() -> UIViewController {
+    public func buildShowMap(forRow row: Int) -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(
             withIdentifier: "ShowMap") as? ShowMapViewController else {
@@ -55,7 +60,7 @@ extension AppBuilder: ShowMapBuilder {
         }
         
         let interactor = ShowMapInteractor()
-        let presenter = ShowMapPresenter(row: 0)
+        let presenter = ShowMapPresenter(row: row)
         let router = ShowMapRouter()
         
         router.builder = self

@@ -9,5 +9,5 @@
 import UIKit
 
 public protocol ShowMapBuilder: class {
-    func buildShowMap() -> UIViewController
+    func buildShowMap(forRow row: Int) -> UIViewController
 }

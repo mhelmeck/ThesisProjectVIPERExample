@@ -20,11 +20,11 @@ public protocol CitiesListView: class {
 public protocol CitiesListEventHandler: class {
     func handleViewReady()
     func handleViewDidAppear()
-    func handleCellPressed(atRow: Int)
-    func handleNaviagationPressed(atRow: Int)
+    func handleCellPressed(atRow row: Int)
+    func handleNaviagationPressed(atRow row: Int)
 }
 
 public protocol CitiesListNavigation: class {
     func navigateToDetails()
-    func navigateToMap()
+    func navigateToMap(atRow row: Int)
 }
