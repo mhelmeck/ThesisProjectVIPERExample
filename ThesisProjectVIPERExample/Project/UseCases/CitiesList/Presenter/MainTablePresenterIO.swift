@@ -22,9 +22,11 @@ public protocol CitiesListEventHandler: class {
     func handleViewDidAppear()
     func handleCellPressed(atRow row: Int)
     func handleNaviagationPressed(atRow row: Int)
+    func handleAddPressed()
 }
 
 public protocol CitiesListNavigation: class {
-    func navigateToDetails()
+    func navigateToCityDetails(atRow row: Int)
     func navigateToMap(atRow row: Int)
+    func navigateToSearchLocation()
 }

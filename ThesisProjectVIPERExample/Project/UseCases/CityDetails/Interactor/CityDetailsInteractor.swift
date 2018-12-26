@@ -16,4 +16,8 @@ public class CityDetailsInteractor {
     public init() {}
 }
 
-extension CityDetailsInteractor: CityDetailsUseCase {}
+extension CityDetailsInteractor: CityDetailsUseCase {
+    public func getCities() -> [City] {
+        return dataManager.getCities()
+    }
+}

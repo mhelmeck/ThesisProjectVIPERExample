@@ -20,17 +20,12 @@ public class CitiesListViewController: UITableViewController {
         return view
     }()
     
-    private let addButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
-                                                target: self,
-                                                action: #selector(addButtonItemTapped))
-    
     // MARK: - Init
     override public func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Maciej Hełmecki"
-        navigationItem.rightBarButtonItem = addButtonItem
-        
+
         registerCell()
+        setupNavigationItem()
         setupTableView()
         
         eventHandler.handleViewReady()
@@ -38,9 +33,9 @@ public class CitiesListViewController: UITableViewController {
     
     @objc
     private func addButtonItemTapped() {
-        
+        eventHandler.handleAddPressed()
     }
-    
+
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -51,6 +46,13 @@ public class CitiesListViewController: UITableViewController {
     private func registerCell() {
         let nib = UINib(nibName: CityViewCell.identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: CityViewCell.identifier)
+    }
+    
+    private func setupNavigationItem() {
+        navigationItem.title = "Maciej Hełmecki"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+                                                            target: self,
+                                                            action: #selector(addButtonItemTapped))
     }
     
     private func setupTableView() {

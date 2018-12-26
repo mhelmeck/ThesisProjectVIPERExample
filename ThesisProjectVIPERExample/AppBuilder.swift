@@ -26,7 +26,7 @@ extension AppBuilder: CitiesListBuilder {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(
             withIdentifier: "CitiesList") as? CitiesListViewController else {
-                fatalError("Could not instantiate initial storyboard with name: ShowMap")
+                fatalError("Could not instantiate initial storyboard with name: CitiesList")
         }
         
         let interactor = CitiesListInteractor()
@@ -62,6 +62,66 @@ extension AppBuilder: ShowMapBuilder {
         let interactor = ShowMapInteractor()
         let presenter = ShowMapPresenter(row: row)
         let router = ShowMapRouter()
+        
+        router.builder = self
+        router.viewController = viewController
+        
+        presenter.view = viewController
+        presenter.interactor = interactor
+        presenter.router = router
+        
+        interactor.output = presenter
+        interactor.apiManager = apiManager
+        interactor.dataManager = repository
+        
+        viewController.presentation = presenter
+        viewController.eventHandler = presenter
+        
+        return viewController
+    }
+}
+
+extension AppBuilder: CityDetailsBuilder {
+    public func buildCityDetails(forRow row: Int) -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(
+            withIdentifier: "CityDetails") as? CityDetailsViewController else {
+                fatalError("Could not instantiate initial storyboard with name: CityDetails")
+        }
+        
+        let interactor = CityDetailsInteractor()
+        let presenter = CityDetailsPresenter(row: row)
+        let router = CityDetailsRouter()
+        
+        router.builder = self
+        router.viewController = viewController
+        
+        presenter.view = viewController
+        presenter.interactor = interactor
+        presenter.router = router
+        
+        interactor.output = presenter
+        interactor.apiManager = apiManager
+        interactor.dataManager = repository
+        
+        viewController.presentation = presenter
+        viewController.eventHandler = presenter
+        
+        return viewController
+    }
+}
+
+extension AppBuilder: SearchLocationBuilder {
+    public func buildSearchLocation() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(
+            withIdentifier: "SearchLocation") as? SearchLocationViewController else {
+                fatalError("Could not instantiate initial storyboard with name: SearchLocation")
+        }
+        
+        let interactor = SearchLocationInteractor()
+        let presenter = SearchLocationPresenter()
+        let router = SearchLocationRouter()
         
         router.builder = self
         router.viewController = viewController

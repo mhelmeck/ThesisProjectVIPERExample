@@ -43,11 +43,15 @@ extension CitiesListPresenter: CitiesListEventHandler {
     }
     
     public func handleCellPressed(atRow row: Int) {
-        router.navigateToDetails()
+        router.navigateToCityDetails(atRow: row)
     }
     
     public func handleNaviagationPressed(atRow row: Int) {
         router.navigateToMap(atRow: row)
+    }
+    
+    public func handleAddPressed() {
+        router.navigateToSearchLocation()
     }
 }
 

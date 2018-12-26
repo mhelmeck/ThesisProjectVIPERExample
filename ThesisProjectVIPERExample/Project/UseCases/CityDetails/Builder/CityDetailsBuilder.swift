@@ -9,5 +9,5 @@
 import UIKit
 
 public protocol CityDetailsBuilder: class {
-    func buildCityDetails() -> UIViewController
+    func buildCityDetails(forRow row: Int) -> UIViewController
 }

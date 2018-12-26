@@ -28,3 +28,5 @@ public class SearchLocationViewController: UIViewController {
     
     // MARK: - Private methods
 }
+
+extension SearchLocationViewController: SearchLocationView {}

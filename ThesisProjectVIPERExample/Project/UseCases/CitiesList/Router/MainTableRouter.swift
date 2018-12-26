@@ -10,7 +10,7 @@ import UIKit
 
 public class CitiesListRouter {
     // MARK: - Public properties
-    public typealias OtherBuilders = ShowMapBuilder
+    public typealias OtherBuilders = ShowMapBuilder & CityDetailsBuilder & SearchLocationBuilder
     
     public var builder: OtherBuilders!
     public weak var viewController: UIViewController!
@@ -20,8 +20,16 @@ public class CitiesListRouter {
 }
 
 extension CitiesListRouter: CitiesListNavigation {
-    public func navigateToDetails() {
+    public func navigateToSearchLocation() {
+        let searchLocationViewController = builder.buildSearchLocation()
         
+        viewController.navigationController?.pushViewController(searchLocationViewController, animated: true)
+    }
+    
+    public func navigateToCityDetails(atRow row: Int) {
+        let cityDetailsViewController = builder.buildCityDetails(forRow: row)
+        
+        viewController.navigationController?.pushViewController(cityDetailsViewController, animated: true)
     }
     
     public func navigateToMap(atRow row: Int) {

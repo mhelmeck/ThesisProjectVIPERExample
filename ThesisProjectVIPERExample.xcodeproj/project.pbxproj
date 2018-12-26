@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		22C3519AF42515C0D495D4E4 /* Pods_ThesisProjectVIPERExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37445F42D1FF166CD2129602 /* Pods_ThesisProjectVIPERExample.framework */; };
 		96C3D2D4F55FC5810928D0B0 /* Pods_ThesisProjectVIPERExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BDA745C06E488CFB1620D87 /* Pods_ThesisProjectVIPERExampleTests.framework */; };
+		9856AB0C21D42BB700AE6427 /* ForecastUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9856AB0B21D42BB700AE6427 /* ForecastUIView.swift */; };
 		98572B2521BDAA22009C8D81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98572B2421BDAA22009C8D81 /* AppDelegate.swift */; };
 		98572B2A21BDAA22009C8D81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98572B2821BDAA22009C8D81 /* Main.storyboard */; };
 		98572B2D21BDAA22009C8D81 /* ThesisProjectVIPERExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98572B2B21BDAA22009C8D81 /* ThesisProjectVIPERExample.xcdatamodeld */; };
@@ -89,6 +90,7 @@
 		4BDA745C06E488CFB1620D87 /* Pods_ThesisProjectVIPERExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThesisProjectVIPERExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA51D6F78CB0692A8917B70 /* Pods-ThesisProjectVIPERExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThesisProjectVIPERExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThesisProjectVIPERExampleTests/Pods-ThesisProjectVIPERExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		738251771BC5E3B901698A83 /* Pods-ThesisProjectVIPERExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThesisProjectVIPERExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThesisProjectVIPERExample/Pods-ThesisProjectVIPERExample.release.xcconfig"; sourceTree = "<group>"; };
+		9856AB0B21D42BB700AE6427 /* ForecastUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastUIView.swift; sourceTree = "<group>"; };
 		98572B2121BDAA22009C8D81 /* ThesisProjectVIPERExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThesisProjectVIPERExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98572B2421BDAA22009C8D81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98572B2921BDAA22009C8D81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -534,6 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				98986ACE21D19BD900408831 /* CityDetailsViewController.swift */,
+				9856AB0B21D42BB700AE6427 /* ForecastUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -744,6 +747,7 @@
 				98986ADD21D19D6F00408831 /* SearchLocationViewController.swift in Sources */,
 				98986AD321D19C0E00408831 /* CityDetailsInteractor.swift in Sources */,
 				98986AA321CF2ACA00408831 /* MainTablePresenterIO.swift in Sources */,
+				9856AB0C21D42BB700AE6427 /* ForecastUIView.swift in Sources */,
 				98986A5021CF113800408831 /* ButtonType.swift in Sources */,
 				98986A5421CF117900408831 /* UIButton+Extensions.swift in Sources */,
 				98986A7D21CF139700408831 /* ForecastAdapter.swift in Sources */,
