@@ -88,6 +88,10 @@ public class CityDetailsViewController: UIViewController {
 }
 
 extension CityDetailsViewController: CityDetailsView {
+    public func setTitle(title: String) {
+        navigationItem.title = title
+    }
+    
     public func updateView(withForecastViewModel viewModel: ForecastViewModel) {
         forecastView.imageView.image = UIImage(named: viewModel.iconName)
         forecastView.typeValue.text = viewModel.typeTextValue

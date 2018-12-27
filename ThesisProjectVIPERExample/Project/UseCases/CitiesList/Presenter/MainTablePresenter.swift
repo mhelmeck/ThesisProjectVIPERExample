@@ -21,14 +21,17 @@ extension CitiesListPresenter: CitiesListPresentation {
         return interactor.getCities().count
     }
     
-    public func configureCell(atRow row: Int, configure: (String, String, String) -> Void) {
+    public func configureCell(atRow row: Int, configure: (CitiesListCellViewModel) -> Void) {
         let city = interactor.getCities()[row]
         
         let cityName = city.name
         let temperature = [String(Int(city.brief.currentTemperature)), "°C"].joined(separator: " ")
         let iconName = AssetCodeMapper.map(city.brief.asset)
+        let cellViewModel = CitiesListCellViewModel(cityName: cityName,
+                                                    temperature: temperature,
+                                                    iconName: iconName)
         
-        configure(cityName, temperature, iconName)
+        configure(cellViewModel)
     }
 }
 

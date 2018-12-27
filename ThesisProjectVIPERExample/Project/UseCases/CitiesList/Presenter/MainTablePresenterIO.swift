@@ -8,7 +8,7 @@
 
 public protocol CitiesListPresentation: class {
     func getNumberOfCells() -> Int
-    func configureCell(atRow row: Int, configure: (String, String, String) -> Void)
+    func configureCell(atRow row: Int, configure: (CitiesListCellViewModel) -> Void)
 }
 
 public protocol CitiesListView: class {
@@ -29,4 +29,10 @@ public protocol CitiesListNavigation: class {
     func navigateToCityDetails(atRow row: Int)
     func navigateToMap(atRow row: Int)
     func navigateToSearchLocation()
+}
+
+public struct CitiesListCellViewModel {
+    public var cityName: String
+    public var temperature: String
+    public var iconName: String
 }

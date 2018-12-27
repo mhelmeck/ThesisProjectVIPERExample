@@ -19,4 +19,8 @@ public class SearchLocationRouter {
     public init() {}
 }
 
-extension SearchLocationRouter: SearchLocationNavigation {}
+extension SearchLocationRouter: SearchLocationNavigation {
+    public func navigateToList() {
+        viewController.navigationController?.popViewController(animated: true)
+    }
+}

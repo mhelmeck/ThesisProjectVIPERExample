@@ -10,6 +10,7 @@ public protocol CityDetailsPresentation: class {}
 
 public protocol CityDetailsView: class {
     func setDate(date: String)
+    func setTitle(title: String)
     func updateView(withForecastViewModel viewModel: ForecastViewModel)
     func disableButton(buttonType: ButtonType)
     func enableButton(buttonType: ButtonType)

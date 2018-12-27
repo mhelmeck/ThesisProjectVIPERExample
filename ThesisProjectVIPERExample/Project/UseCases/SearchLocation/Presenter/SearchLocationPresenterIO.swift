@@ -6,13 +6,32 @@
 //  Copyright © 2018 Maciej Hełmecki. All rights reserved.
 //
 
-public protocol SearchLocationPresentation: class {}
+public protocol SearchLocationPresentation: class {
+    func getNumberOfCells() -> Int
+    func configureCell(atRow row: Int, configure: (SearchLocationCellViewModel) -> Void)
+}
 
-public protocol SearchLocationView: class {}
+public protocol SearchLocationView: class {
+    func reloadView()
+    func setLoadingState(isLoading: Bool)
+    func setCurrentLocationLabel(_ text: String) 
+    func enableCurrentButton()
+}
 
 public protocol SearchLocationEventHandler: class {
     func handleViewReady()
     func handleViewDidAppear()
+    func handleSearch(phrase: String)
+    func handleSearchCurrent()
+    func handleCancel()
+    func handleCellPressed(atRow row: Int)
+    func handleLocationDidChange(latitude: Double, longitude: Double)
 }
 
-public protocol SearchLocationNavigation: class {}
+public protocol SearchLocationNavigation: class {
+    func navigateToList()
+}
+
+public struct SearchLocationCellViewModel {
+    public let name: String
+}

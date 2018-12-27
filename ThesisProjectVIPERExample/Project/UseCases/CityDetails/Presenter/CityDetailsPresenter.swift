@@ -29,10 +29,13 @@ extension CityDetailsPresenter: CityDetailsPresentation {}
 extension CityDetailsPresenter: CityDetailsEventHandler {
     public func handleViewReady() {
         city = interactor.getCities()[row]
+    
         updateView()
     }
     
-    public func handleViewDidAppear() {}
+    public func handleViewDidAppear() {
+        view.setTitle(title: city.name)
+    }
     
     public func handleNextPressed() {
         forecastIndex += 1

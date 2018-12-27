@@ -42,6 +42,12 @@ public class CitiesListViewController: UITableViewController {
         eventHandler.handleViewDidAppear()
     }
     
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     // MARK: - Private methods
     private func registerCell() {
         let nib = UINib(nibName: CityViewCell.identifier, bundle: nil)
@@ -92,10 +98,10 @@ public extension CitiesListViewController {
         }
         
         cell.delegate = self
-        presentation.configureCell(atRow: indexPath.row) { cityName, temperature, iconName in
-            cell.cityNameLabel.text = cityName
-            cell.tempLabel.text = temperature
-            cell.iconImageView.image = UIImage(named: iconName)
+        presentation.configureCell(atRow: indexPath.row) { cellViewModel in
+            cell.cityNameLabel.text = cellViewModel.cityName
+            cell.tempLabel.text = cellViewModel.temperature
+            cell.iconImageView.image = UIImage(named: cellViewModel.iconName)
         }
         
         return cell
