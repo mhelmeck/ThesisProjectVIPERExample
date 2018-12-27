@@ -30,11 +30,12 @@ extension CityDetailsPresenter: CityDetailsEventHandler {
     public func handleViewReady() {
         city = interactor.getCities()[row]
     
+        view.setTitle(title: city.name)
         updateView()
     }
     
     public func handleViewDidAppear() {
-        view.setTitle(title: city.name)
+        
     }
     
     public func handleNextPressed() {

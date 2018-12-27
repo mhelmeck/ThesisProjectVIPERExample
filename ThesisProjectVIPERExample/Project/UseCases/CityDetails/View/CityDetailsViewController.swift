@@ -89,7 +89,7 @@ public class CityDetailsViewController: UIViewController {
 
 extension CityDetailsViewController: CityDetailsView {
     public func setTitle(title: String) {
-        navigationItem.title = title
+        self.navigationItem.title = title
     }
     
     public func updateView(withForecastViewModel viewModel: ForecastViewModel) {

@@ -50,12 +50,11 @@ public class CitiesListViewController: UITableViewController {
     
     // MARK: - Private methods
     private func registerCell() {
-        let nib = UINib(nibName: CityViewCell.identifier, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: CityViewCell.identifier)
+        let nib = UINib(nibName: CityCellView.identifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: CityCellView.identifier)
     }
     
     private func setupNavigationItem() {
-        navigationItem.title = "Maciej Hełmecki"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,
                                                             action: #selector(addButtonItemTapped))
@@ -92,8 +91,8 @@ public extension CitiesListViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CityViewCell.identifier,
-                                                       for: indexPath) as? CityViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CityCellView.identifier,
+                                                       for: indexPath) as? CityCellView else {
             fatalError("Failed to dequeue reusable cell")
         }
         
@@ -116,8 +115,8 @@ public extension CitiesListViewController {
     }
 }
 
-extension CitiesListViewController: CityViewCellDelegate {
-    public func cityViewCellDidTapNavigationButton(_ cell: CityViewCell) {
+extension CitiesListViewController: CityCellViewDelegate {
+    public func cityCellViewDidTapNavigationButton(_ cell: CityCellView) {
         guard let row = tableView.indexPath(for: cell)?.row else {
             return
         }

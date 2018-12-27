@@ -35,22 +35,3 @@ public struct ForecastViewModel {
     public var rainfallTextValue: String
     public var pressureTextValue: String
 }
-
-//// MARK: - Init
-//public init(iconName: String,
-//       typeTextValue: String,
-//       minTempTextValue: String,
-//       maxTempTextValue: String,
-//       windSpeedTextValue: String,
-//       windDirectionTextValue: String,
-//       rainfallTextValue: String,
-//       pressureTextValue: String) {
-//    self.iconName = iconName
-//    self.typeTextValue = typeTextValue
-//    self.minTempTextValue = minTempTextValue
-//    self.maxTempTextValue = maxTempTextValue
-//    self.windSpeedTextValue = windSpeedTextValue
-//    self.windDirectionTextValue = windSpeedTextValue
-//    self.rainfallTextValue = rainfallTextValue
-//    self.pressureTextValue = pressureTextValue
-//}
