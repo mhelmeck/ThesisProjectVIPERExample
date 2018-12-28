@@ -37,7 +37,7 @@ extension CitiesListPresenter: CitiesListPresentation {
 
 extension CitiesListPresenter: CitiesListEventHandler {
     public func handleViewReady() {
-        view.isLoading(true)
+        view.setLoadingState(isLoading: true)
         interactor.fetchInitialData()
     }
     
@@ -62,6 +62,6 @@ extension CitiesListPresenter: CitiesListUseCaseOutput {
     public func didFetchData() {
         view.reloadView()
         view.setSeparatorStyle(.singleLine)
-        view.isLoading(false)
+        view.setLoadingState(isLoading: false)
     }
 }

@@ -8,10 +8,8 @@
 
 import UIKit
 
-public class ForecastUIView: UIView {
+public class ForecastUIView: UIView {    
     // MARK: - Public properties
-    
-    // MARK: - Private properties
     // swiftlint:disable private_outlet
     @IBOutlet public weak var imageView: UIImageView!
     
@@ -36,7 +34,7 @@ public class ForecastUIView: UIView {
     @IBOutlet public weak var pressureTitle: UILabel!
     @IBOutlet public weak var pressureValue: UILabel!
     
-    // Init
+    // MARK: - Init
     override public func awakeFromNib() {
         super.awakeFromNib()
         
@@ -47,7 +45,7 @@ public class ForecastUIView: UIView {
         super.init(coder: aDecoder)
     }
     
-    // Private methods
+    // MARK: - Private methods
     private func setupView() {
         imageView.contentMode = .scaleAspectFit
         
@@ -86,15 +84,4 @@ public class ForecastUIView: UIView {
             $0?.textColor = .customPurple
         }
     }
-    
-//    private func bind(viewModel: ForecastViewModel) {
-//        imageView.image = UIImage(named: viewModel.iconName)
-//        typeValue.text = viewModel.typeTextValue
-//        minTempValue.text = viewModel.minTempTextValue
-//        maxTempValue.text = viewModel.maxTempTextValue
-//        windSpeedValue.text = viewModel.windSpeedTextValue
-//        windDirectionValue.text = viewModel.windDirectionTextValue
-//        rainfallValue.text = viewModel.rainfallTextValue
-//        pressureValue.text = viewModel.pressureTextValue
-//    }
 }

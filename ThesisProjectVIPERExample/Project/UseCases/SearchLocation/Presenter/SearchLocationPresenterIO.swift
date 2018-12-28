@@ -8,7 +8,7 @@
 
 public protocol SearchLocationPresentation: class {
     func getNumberOfCells() -> Int
-    func configureCell(atRow row: Int, configure: (SearchLocationCellViewModel) -> Void)
+    func configureCell(atRow row: Int, configure: (LocationCellViewModel) -> Void)
 }
 
 public protocol SearchLocationView: class {
@@ -32,6 +32,6 @@ public protocol SearchLocationNavigation: class {
     func navigateToList()
 }
 
-public struct SearchLocationCellViewModel {
-    public let name: String
+public struct LocationCellViewModel {
+    public let cityName: String
 }

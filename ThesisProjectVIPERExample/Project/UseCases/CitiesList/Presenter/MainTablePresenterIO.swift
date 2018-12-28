@@ -13,7 +13,7 @@ public protocol CitiesListPresentation: class {
 
 public protocol CitiesListView: class {
     func reloadView()
-    func isLoading(_ isLoading: Bool)
+    func setLoadingState(isLoading: Bool)
     func setSeparatorStyle(_ style: SeparatorStyle)
 }
 

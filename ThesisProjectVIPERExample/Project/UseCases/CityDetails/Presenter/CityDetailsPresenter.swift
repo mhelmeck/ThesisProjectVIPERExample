@@ -15,7 +15,7 @@ public class CityDetailsPresenter {
     // MARK: - Private properties
     private let row: Int
     private var forecastIndex: Int
-    private var city: City!
+    private var forecastCollection: [Forecast] = []
 
     // MARK: - Init
     public init(row: Int) {
@@ -28,7 +28,8 @@ extension CityDetailsPresenter: CityDetailsPresentation {}
 
 extension CityDetailsPresenter: CityDetailsEventHandler {
     public func handleViewReady() {
-        city = interactor.getCities()[row]
+        let city = interactor.getCities()[row]
+        forecastCollection = city.forecastCollection
     
         view.setTitle(title: city.name)
         updateView()
@@ -49,7 +50,6 @@ extension CityDetailsPresenter: CityDetailsEventHandler {
     }
     
     private func updateView() {
-        let forecastCollection = city.forecastCollection
         let forecast = forecastCollection[forecastIndex]
         let date = forecast.date
         let iconName = AssetCodeMapper.map(forecast.assetCode)
@@ -83,8 +83,6 @@ extension CityDetailsPresenter: CityDetailsEventHandler {
     }
     
     private func handleButtons() {
-        let forecastCollection = city.forecastCollection
-        
         if forecastIndex == 0 {
             view.disableButton(buttonType: .preview)
             if forecastIndex != forecastCollection.count - 1 {

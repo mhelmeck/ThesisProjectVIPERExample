@@ -31,11 +31,6 @@ public class CitiesListViewController: UITableViewController {
         eventHandler.handleViewReady()
     }
     
-    @objc
-    private func addButtonItemTapped() {
-        eventHandler.handleAddPressed()
-    }
-
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -64,6 +59,11 @@ public class CitiesListViewController: UITableViewController {
         tableView.backgroundView = activityIndicatorView
         tableView.separatorStyle = .none
     }
+    
+    @objc
+    private func addButtonItemTapped() {
+        eventHandler.handleAddPressed()
+    }
 }
 
 extension CitiesListViewController: CitiesListView {
@@ -76,7 +76,7 @@ extension CitiesListViewController: CitiesListView {
         }
     }
     
-    public func isLoading(_ isLoading: Bool) {
+    public func setLoadingState(isLoading: Bool) {
         isLoading ? activityIndicatorView.startAnimating() : activityIndicatorView.stopAnimating()
     }
     

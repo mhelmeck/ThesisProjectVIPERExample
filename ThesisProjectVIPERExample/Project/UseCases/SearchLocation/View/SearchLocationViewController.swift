@@ -154,14 +154,14 @@ extension SearchLocationViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AddCityCell") else {
-            fatalError("Error")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell") else {
+            fatalError("Failed to dequeue reusable cell")
         }
         
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator
         presentation.configureCell(atRow: indexPath.row) { cellViewModel in
-            cell.textLabel?.text = cellViewModel.name
+            cell.textLabel?.text = cellViewModel.cityName
         }
         
         return cell

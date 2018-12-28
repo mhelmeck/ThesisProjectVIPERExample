@@ -18,8 +18,8 @@ public class SearchLocationInteractor {
 
 extension SearchLocationInteractor: SearchLocationUseCase {
     public func fetchCurrentLocation(forCoordinates coordinates: Coordinates) {
-        let latitude = String(coordinates.lat)
-        let longitude = String(coordinates.lon)
+        let latitude = String(coordinates.latitude)
+        let longitude = String(coordinates.longitude)
         apiManager.fetchParents(withCoordinate: latitude, longitude) { [weak self] in
             guard let self = self,
                   let currentParent = $0.first else {
@@ -28,6 +28,7 @@ extension SearchLocationInteractor: SearchLocationUseCase {
             
             let adapter = LocationAdapter(apiParent: currentParent)
             let currentLocation = adapter.toLocation()
+            
             self.output.didFetchCurrentLocation(location: currentLocation)
         }
     }
@@ -38,26 +39,19 @@ extension SearchLocationInteractor: SearchLocationUseCase {
                 return
             }
             
-            let adapter = LocationCollectionAdapter(apiParentCollection: $0)
-            let locationCollection = adapter.toLocationCollection()
-            self.updateRepository(withData: locationCollection)
-            
-            self.output.didFetchLocations()
+            self.fetchLocations(from: $0)
         }
     }
     
     public func fetchLocations(forCoordinates coordinates: Coordinates) {
-        let latitude = String(coordinates.lat)
-        let longitude = String(coordinates.lon)
+        let latitude = String(coordinates.latitude)
+        let longitude = String(coordinates.longitude)
         apiManager.fetchParents(withCoordinate: latitude, longitude) { [weak self] in
             guard let self = self else {
                 return
             }
 
-            let adapter = LocationCollectionAdapter(apiParentCollection: $0)
-            let locationCollection = adapter.toLocationCollection()
-            self.updateRepository(withData: locationCollection)
-            self.output.didFetchLocations()
+            self.fetchLocations(from: $0)
         }
     }
     
@@ -81,6 +75,14 @@ extension SearchLocationInteractor: SearchLocationUseCase {
     
     public func clearData() {
         dataManager.clearLocations()
+    }
+    
+    private func fetchLocations(from parents: [APIParent]) {
+        let adapter = LocationCollectionAdapter(apiParentCollection: parents)
+        let locationCollection = adapter.toLocationCollection()
+        
+        self.updateRepository(withData: locationCollection)
+        self.output.didFetchLocations()
     }
     
     private func updateRepository(withData data: [Location]) {

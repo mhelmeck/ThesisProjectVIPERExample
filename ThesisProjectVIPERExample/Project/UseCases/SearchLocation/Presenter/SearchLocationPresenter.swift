@@ -24,9 +24,9 @@ extension SearchLocationPresenter: SearchLocationPresentation {
         return interactor.getLocations().count
     }
     
-    public func configureCell(atRow row: Int, configure: (SearchLocationCellViewModel) -> Void) {
+    public func configureCell(atRow row: Int, configure: (LocationCellViewModel) -> Void) {
         let location = interactor.getLocations()[row]
-        let cellViewModel = SearchLocationCellViewModel(name: location.name)
+        let cellViewModel = LocationCellViewModel(cityName: location.name)
         
         configure(cellViewModel)
     }
@@ -48,7 +48,8 @@ extension SearchLocationPresenter: SearchLocationEventHandler {
     }
     
     public func handleLocationDidChange(latitude: Double, longitude: Double) {
-        let coordinates = Coordinates(lat: latitude, lon: longitude)
+        let coordinates = Coordinates(latitude: latitude,
+                                      longitude: longitude)
         
         interactor.fetchCurrentLocation(forCoordinates: coordinates)
     }

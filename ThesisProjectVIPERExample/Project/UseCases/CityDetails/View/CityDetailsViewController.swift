@@ -31,8 +31,6 @@ public class CityDetailsViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
-    // MARK: - Public methods
-    
     // MARK: - Private methods
     @IBAction private func previewButtonTapped(_ sender: Any) {
         perform(animation: {

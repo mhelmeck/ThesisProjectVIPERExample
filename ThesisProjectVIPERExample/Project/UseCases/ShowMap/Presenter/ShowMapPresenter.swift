@@ -28,8 +28,8 @@ extension ShowMapPresenter: ShowMapEventHandler {
 
     public func handleViewDidAppear() {
         let city = interactor.getCities()[row]
-        let latitude = city.coordinates.lat
-        let longitude = city.coordinates.lon
+        let latitude = city.coordinates.latitude
+        let longitude = city.coordinates.longitude
         
         view.setLocation(latitude: latitude, longitude: longitude)
         view.setupAnnotation(latitude: latitude, longitude: longitude)
